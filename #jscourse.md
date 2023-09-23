@@ -8,7 +8,7 @@
 let varname = 'test'; // using let to define
 var varName = 'test'; // using var to define
  ```
-
+test
 ## Primitive/Value Types
 - Strings - ```let name = 'Ravi';```
 - Numbers - ```let age = 31;```
@@ -181,3 +181,38 @@ while (i <= 10);
 **Take aways,**
 1. There is no ending ```;``` for the whole "for & while block".
 2. For the Do While loop, a ```;``` is placed at the "while" condition at last. 
+
+### For in
+```
+// Just like "for in" in python, we can use this to iterate an object/element without defining it explicitly.
+
+
+const person = {
+  name: 'Ravi',
+  age: 31
+}
+
+for (let jum in person)
+  console.log(jum, person[jum]);
+
+const colors = ['red', 'green', 'yellow', 'black'];
+
+for (let idx in colors)
+  console.log(idx, colors[idx]);
+```
+
+**Take aways,**
+1. The "For in" loop is used to traverse between the list (a.k.a array) or object (that contains multiple properties). Or simply, it means, iterating over the indexes. 
+
+
+### For-of 
+```
+const colors  = ['red', 'green', 'blue'];
+
+for (let color of colors)
+  console.log(colors)
+```
+
+**Take-aways**
+1. For of is used to directly get the values of an array. Whereas For in is used to get the index first.
+2. For in can be used in both arrays and objects. But For ofs can be mostly used in arrays only.
