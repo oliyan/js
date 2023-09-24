@@ -216,3 +216,7 @@ for (let color of colors)
 **Take-aways**
 1. For of is used to directly get the values of an array. Whereas For in is used to get the index first.
 2. For in can be used in both arrays and objects. But For ofs can be mostly used in arrays only.
+
+### Modify Control Flow
+1. Use ```break;``` to break the loop.
+2. Use ```continue;``` to iterate the loop.
