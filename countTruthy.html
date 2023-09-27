@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Count Truthy</h1>
+  <script>
+
+    function countTruthy (array)
+    {
+      let count = 0;
+      for (var i = 1; i <=array.length; i++ )
+      {
+        if (array[i])
+          count += 1;
+      }
+      console.log('No of Truthy Elements:', count);
+    }
+
+    array = [0,null,'', 1, 2, 3, 4];
+    countTruthy(array);
+
+  </script>
+</body>
+</html>

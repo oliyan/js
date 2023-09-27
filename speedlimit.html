@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1> Speed Limit</h1>
+  <script>
+
+    function checkSpeed(speed)
+    {
+      console.log('Your Speed is:', speed, 'kmph');
+      const baseSpeed = 14;
+      let score = Math.floor(speed/5);
+      score = score - baseSpeed;
+
+      if (score <= 0)
+        console.log('Speed is ok');
+
+      else if (score > 0 && score < 13)
+        console.log('Point: ' + score);
+      
+      else if (score > 12)
+        console.log('License Suspended');
+  
+      //return score;
+    }
+
+    console.log(checkSpeed(75));
+
+  </script>
+</body>
+</html>
