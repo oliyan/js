@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  prime number
+<script>
+
+function printPrimes(num){
+  for (i=1; i<=num; i++){
+    if (isPrime(i) == true)
+      console.log(i);
+  }
+
+}
+
+function isPrime(numb){
+  let end = Math.floor(numb/2);
+
+  if (numb < 2) return false;
+
+  for (j = 2; j <= end; j++)
+    if(numb % j === 0)
+      return false;
+
+  return true;
+
+}
+
+printPrimes(1000000000000);
+
+</script>
+</body>
+</html>

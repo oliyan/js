@@ -181,6 +181,7 @@ while (i <= 10);
 **Take aways,**
 1. There is no ending ```;``` for the whole "for & while block".
 2. For the Do While loop, a ```;``` is placed at the "while" condition at last. 
+3. There is no ending ```;``` for the incrementor (as in i++)
 
 ### For in
 ```
