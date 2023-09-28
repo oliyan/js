@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>sum of mutiples</h1>
+  <script>
+
+    function sum(number){
+      let result = 0;
+      for (let i = 1; i<=number; i++)
+        if (i % 3 == 0 || i % 5 == 0)
+          result += i;
+      return result;
+    }
+
+    console.log(sum(30));
+
+  </script>
+</body>
+</html>
