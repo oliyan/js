@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>find grade</h1>
+  <script>
+
+    function calculateGrade(marks){
+      const subjects = marks.length;
+      let totalMarks = 0;
+      for (let i = 0; i<=(subjects-1); i++){
+        totalMarks += marks[i];
+      }
+      const average = totalMarks/subjects;
+      console.log(average);
+
+
+      if (average <= 59)
+        console.log('Grade is F');
+      
+      else if (average <= 69 && average >= 60)
+        console.log('Grade is D');
+
+      else if (average <= 79 && average >69)
+        console.log('Grade is C');
+
+      else if (average <= 89 && average >79)
+        console.log('Grade is B');
+
+      else if (average <= 100 && average > 89)
+        console.log('Grade is A');
+
+    }
+
+    const marks = [99, 95, 81, 94, 75, 94, 89]
+    calculateGrade(marks);
+  </script>
+</body>
+</html>
