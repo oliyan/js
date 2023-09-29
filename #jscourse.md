@@ -41,20 +41,20 @@ Used to perform arithmatic operations on variables or object. e.g., ``` +, -, /,
   To compare the relation b/w two or more variables or objects. (>, <. >=, <=)
 ### Equality
   - "Strict Equality" checks for both type and value. (=\==, !=\==)
-  ```
+  ```javascript
   console.log(1===1); // TRUE
   console.log(1==='1'); // FALSE because of type mismatch
   ```
   - "Lose Equality" checks for only value. (=\=, !=\=)
 
-```
+```javascript
   console.log(1=='1'); // TRUE because the values are equal
   console.log(true=='1'); // TRUE because the RHS is true in a way
   ```
 
 ### "Ternary / Conditional" 
 It combines the condition and assignment in a single instruction.
-```
+```javascript
   let points = 90 
   let category = points > 100 ? 'gold' : 'silver'; 
   console.log(category); // prints silver
@@ -75,7 +75,7 @@ It combines the condition and assignment in a single instruction.
 
 ### Bitwise
  Bitwise operators are logical operators that performs on the binary digits a.k.a bit-wise.
- ```
+ ```javascript
  // 1 = 00000001
  // 2 = 00000010
  // 3 = 00000011
@@ -102,7 +102,7 @@ It combines the condition and assignment in a single instruction.
 # Control Flow
 
 ### If Else
-```
+```javascript
 let hour = 20;
 if (hour >= 6 && hour < 12)
   console. log( 'Good Morning');
@@ -116,7 +116,7 @@ else
 2. A block of statements need an { }
 
 ### Switch Case
-```
+```javascript
 let role = 'guest';
 switch (role) 
 {
@@ -139,7 +139,7 @@ switch (role)
 4. The ```other``` equivalent in RPGLE is ```default:```. This don't need ```break;``` as it will be the last part of the switch case that will be executed. 
 
 ### For Loop
-```
+```javascript
 //Print Even numbers from 1 to 10 using for loop
 
 for (let i = 1; i <= 10; i++)
@@ -150,7 +150,7 @@ for (let i = 1; i <= 10; i++)
 ```
 
 ### While
-```
+```javascript
 // Print Even numbers from 1 to 10 using while loop
 // While loop checks the condition at entry.
 
@@ -164,7 +164,7 @@ while (i <= 10)
 ```
 
 ### Do While
-```
+```javascript
 // Print Even numbers from 1 to 10 using do while loop
 // While loop checks the condition at exit.
 
@@ -184,7 +184,7 @@ while (i <= 10);
 3. There is no ending ```;``` for the incrementor (as in i++)
 
 ### For in
-```
+```javascript
 // Just like "for in" in python, we can use this to iterate an object/element without defining it explicitly.
 
 
@@ -207,7 +207,7 @@ for (let idx in colors)
 
 
 ### For-of 
-```
+```javascript
 const colors  = ['red', 'green', 'blue'];
 
 for (let color of colors)
@@ -221,3 +221,30 @@ for (let color of colors)
 ### Modify Control Flow
 1. Use ```break;``` to break the loop.
 2. Use ```continue;``` to iterate the loop.
+
+---
+# Objects
+
+## Definition and declaration
+1. Objects are a collection of key value pairs.
+2. can be declared using ```const objectname = {}``` or ``` let objectname = {}``` Inside the curly braces, we can declare variables, arrays, functions(that may operate on the declared variables) and even objects.
+3. Note that the functions inside an object is called as "method"
+4. Object, just like any other variable ends with a ```;```
+  ```javascript
+  const circle = {
+    radius: 1, // declaring a variable
+    location: { //declaring an object inside an object
+      x: 1,
+      y: 2
+    },
+    isVisible: true, // declaring a boolean operator
+    draw: function(){ // declaring a method
+      console.log('drawing at the position', this.location.x, this.location.y);
+    }
+  };
+
+  >>> circle.draw(); // Method
+  >>> drawing at the position 1 2
+  ```
+
+  ## Factory Functions
