@@ -6,4 +6,4 @@ function maxoftwo(one, two)
         return two;
 }
 
-console.log(maxoftwo(5,2));
+console.log('the max number is', maxoftwo(5,2));
