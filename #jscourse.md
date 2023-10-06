@@ -247,4 +247,5 @@ for (let color of colors)
   >>> drawing at the position 1 2
   ```
 
-  ## Factory Functions
+## Factory Functions
+1. It's a function that returns a new object.
