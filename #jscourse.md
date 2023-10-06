@@ -22,7 +22,7 @@ let salary = null; // null
 - Object 
  >Access the objects' attributes by either a dot or bracket notation.
    ```javascript 
-  let person = {name: 'Ravi', age: 31};
+  let person = {name: 'Ravi', age: 31}; // declare an object
   person.name = 'Mary'; // dot notation
   person['name'] = 'John';  // bracket notation
   ```
@@ -51,7 +51,7 @@ Used to perform arithmatic operations on variables or object. e.g., ``` +, -, /,
   console.log(1===1); // TRUE
   console.log(1==='1'); // FALSE because of type mismatch
   ```
-  - "Lose Equality" checks for only value. (=\=, !=\=)
+  - "Loose Equality" checks for only value. (=\=, !=\=)
 
 ```javascript
   console.log(1=='1'); // TRUE because the values are equal
