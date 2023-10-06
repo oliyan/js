@@ -4,24 +4,30 @@
 - Cannot be reserved keyword
 - cannot contain hyphen
 - Case sensitive
-```
+```javascript
 let varname = 'test'; // using let to define
 var varName = 'test'; // using var to define
  ```
-test
+
 ## Primitive/Value Types
-- Strings - ```let name = 'Ravi';```
-- Numbers - ```let age = 31;```
-- Booleans - ```let isEmployed = true;```
-- Undefined - ```let maritalStatus = undefined;```
-- Null - ```let salary = null;```
+```javascript
+let name = 'Ravi' // strings
+let isEmployed = true; // boolean
+let maritalStatus = undefined; // undefined
+let salary = null; // null
+```
+
 
 ## Reference Types / Dynamic Types
 - Object 
-  -  ```let person = {name: 'Ravi', age: 31};```
-  -  Access the objects' attributes by either a dot or bracket notation.
-  -  ```person.name = 'Mary';``` - dot notation.
-  -  ```person['name'] = 'John'; ``` - bracket notation.
+ >Access the objects' attributes by either a dot or bracket notation.
+   ```javascript 
+  let person = {name: 'Ravi', age: 31}; // declare an object
+  person.name = 'Mary'; // dot notation
+  person['name'] = 'John';  // bracket notation
+  ```
+ 
+
 - Array
   - Index start at 0
   - Can be a homogenous or hetergenous type of elements
@@ -45,7 +51,7 @@ Used to perform arithmatic operations on variables or object. e.g., ``` +, -, /,
   console.log(1===1); // TRUE
   console.log(1==='1'); // FALSE because of type mismatch
   ```
-  - "Lose Equality" checks for only value. (=\=, !=\=)
+  - "Loose Equality" checks for only value. (=\=, !=\=)
 
 ```javascript
   console.log(1=='1'); // TRUE because the values are equal
