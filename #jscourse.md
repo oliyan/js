@@ -8,7 +8,7 @@
 let varname = 'test'; // using let to define
 var varName = 'test'; // using var to define
  ```
-test
+
 ## Primitive/Value Types
 ```javascript
 let name = 'Ravi' // strings
