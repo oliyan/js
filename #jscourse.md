@@ -10,18 +10,24 @@ var varName = 'test'; // using var to define
  ```
 test
 ## Primitive/Value Types
-- Strings - ```let name = 'Ravi';```
-- Numbers - ```let age = 31;```
-- Booleans - ```let isEmployed = true;```
-- Undefined - ```let maritalStatus = undefined;```
-- Null - ```let salary = null;```
+```javascript
+let name = 'Ravi' // strings
+let isEmployed = true; // boolean
+let maritalStatus = undefined; // undefined
+let salary = null; // null
+```
+
 
 ## Reference Types / Dynamic Types
 - Object 
-  -  ```let person = {name: 'Ravi', age: 31};```
-  -  Access the objects' attributes by either a dot or bracket notation.
-  -  ```person.name = 'Mary';``` - dot notation.
-  -  ```person['name'] = 'John'; ``` - bracket notation.
+ >Access the objects' attributes by either a dot or bracket notation.
+   ```javascript 
+  let person = {name: 'Ravi', age: 31};
+  person.name = 'Mary'; // dot notation
+  person['name'] = 'John';  // bracket notation
+  ```
+ 
+
 - Array
   - Index start at 0
   - Can be a homogenous or hetergenous type of elements
