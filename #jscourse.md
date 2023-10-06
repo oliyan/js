@@ -4,7 +4,7 @@
 - Cannot be reserved keyword
 - cannot contain hyphen
 - Case sensitive
-```
+```javascript
 let varname = 'test'; // using let to define
 var varName = 'test'; // using var to define
  ```
