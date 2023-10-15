@@ -217,7 +217,7 @@ for (let idx in colors)
 const colors  = ['red', 'green', 'blue'];
 
 for (let color of colors)
-  console.log(colors)
+  console.log(color)
 ```
 
 **Take-aways**
@@ -248,9 +248,25 @@ for (let color of colors)
       console.log('drawing at the position', this.location.x, this.location.y);
     }
   };
+```
+> circle.draw(); // Method
+> drawing at the position 1 2
+  
 
-  >>> circle.draw(); // Method
-  >>> drawing at the position 1 2
-  ```
-
-  ## Factory Functions
+## Factory Functions
+1. Just like constructor functions, it is used to create objects. In other words, a factory function is a function that can return a newly created object. 
+  ```javascript
+  function createCircle(newObject,parm1,parm2,func1){
+    const newObject{
+      parm1,
+      parm2,
+      func1(){
+        result = parm1+parm2;
+      },
+      output(){
+        console.log('The parameters are ' + parm1, parm2);
+      }
+    }
+  }
+  
+```

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Factory Function</h1>    
+
+<script>
+  function createCircle(newObject,parm1,parm2,func1){
+    const newObject = {
+      parm1,
+      parm2,
+      func1(){
+        result = parm1+parm2;
+      },
+      output(){
+        console.log('The parameters are ' + parm1, parm2);
+      }
+    }
+  }
+</script>
+</body>
+</html>
