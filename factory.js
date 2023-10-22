@@ -1,14 +1,12 @@
-function createCircle(parm1,parm2,func1){
+function createCircle(parm1,parm2){
     return {
       parm1,
       parm2,
       func1() {
-        result = parm1+parm2;
-      },
-      output() {
-        console.log('The parameters are ' + parm1, parm2);
+        console.log('this is printed');
       }
     };
   }
-  const circle1 = createCircle(5,2);
-  console.log(circle1.output);
+  const c1 = createCircle(5,2);
+    console.log(c1['parm1']);
+  //console.log(c1.func1);
