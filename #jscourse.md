@@ -307,15 +307,37 @@ function createCircle(parm1,parm2){
 ## Constructor Function.
 1. Constructor Functions are defined as PascalNotation()
 2. Whereas, Factory Functions are defined as camelNotation()
-3. Function's properties and objects are dynamic. i.e. we can create/edit/delete an object's property after it is created. Only limitation is that we cannot assign
+
 ```Javascript
 function Circle(radius) {
+  console.log('A new object is created using', radius);
   this.radius = radius;
   this.draw = function(){
     console.log('draw');
   }
-}
-// Create a new object using a constructor.
-const my_new_circle = new Circle(5);
 
+}
+ new Circle(1); // a new circle object with radius 1 is created and returned but not stored.
+ const dummy = new Circle(3); // a new cirlce object with radius 3 is created and returned to dummy 
+ dummy.draw(); // the dummy object contains a method called draw and it is invoked. 
+
+```
+
+## Dynamic Nature of objects.
+Function's properties and objects are dynamic. i.e. we can create/edit/delete an object's property after it is created. Only limitation is that we cannot assign.
+
+```Javascript
+
+const circle = {
+  radius: 1
+}
+// The object circle has one property named radius and it is 1. 
+
+circle.color = 'yellow'; // a new property called color is added and assigned the value 'yellow'
+circle.draw = function(){
+  console.log('draw'); // a new method called draw() is added.
+
+delete circle.color; // delete any property
+console.log(circle); 
+}
 ```
