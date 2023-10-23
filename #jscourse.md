@@ -256,7 +256,7 @@ for (let color of colors)
 ## Factory Functions
 1. Just like constructor functions, it is used to create objects. In other words, a factory function is a function that can return a newly created object. 
   ```javascript
-function createCircle(parm1,parm2,func1){
+function createCircle(parm1,parm2){
     return {
       parm1: parm1,
       parm2: parm2, 
@@ -270,28 +270,32 @@ function createCircle(parm1,parm2,func1){
         console.log('Calling output function ' + parm1, parm2);
       }
     };
-  } 
+  }
   const circle1 = createCircle(5,2);
-  console.log('logging the circle1 object')
+  console.log('>>>>>logging the circle1 object')
   console.log(circle1);
-  console.log('logging the circle1.myfunc() function');
+  console.log('>>>>>logging the circle1.myfunc() function');
   console.log(circle1.myfunc());
+  console.log('>>>>>Calling the circle1.output() function directly');
   circle1.output();
-  console.log('Calling the circle1.myfunc() function');
+  console.log('>>>>>Assigning the output of myfunc() to a variable called final_result');
   let final_result = circle1.myfunc();
-  console.log('Logging the return value from circle1.myfunc() ' + final_result);
+  console.log('>>>>>Logging the return value from circle1.myfunc() ' + final_result);
   
 
 // Output
-// logging the circle1 object
+// >>>>>logging the circle1 object
 // {parm1: 5, parm2: 2, myfunc: ƒ, output: ƒ}
-// logging the circle1.myfunc() function
+// >>>>>logging the circle1.myfunc() function
 // Calling myfunc 
 // The addition is 7
+// >>>>>Calling the circle1.output() function directly
 // Calling output function 5 2
-// Calling the circle1.myfunc() function
+///>>>>>Assigning the output of myfunc() to a variable called final_result
 // Calling myfunc 
-// Logging the return value from circle1.myfunc() The addition is 7
+// >>>>>Logging the return value from circle1.myfunc() The addition is 7
+
+
 ```
 
 > 1. We can directly return an object from a function.
@@ -300,3 +304,18 @@ function createCircle(parm1,parm2,func1){
 >
 
 
+## Constructor Function.
+1. Constructor Functions are defined as PascalNotation()
+2. Whereas, Factory Functions are defined as camelNotation()
+3. Function's properties and objects are dynamic. i.e. we can create/edit/delete an object's property after it is created. Only limitation is that we cannot assign
+```Javascript
+function Circle(radius) {
+  this.radius = radius;
+  this.draw = function(){
+    console.log('draw');
+  }
+}
+// Create a new object using a constructor.
+const my_new_circle = new Circle(5);
+
+```
