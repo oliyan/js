@@ -9,19 +9,30 @@
 <h1>Factory Function</h1>    
 
 <script>
-  function createCircle(newObject,parm1,parm2,func1){
-    const newObject = {
-      parm1,
-      parm2,
-      func1(){
+function createCircle(parm1,parm2,func1){
+    return {
+      parm1: parm1,
+      parm2: parm2, 
+      myfunc() {
+        console.log('Calling myfunc ');
         result = parm1+parm2;
+        results = 'The addition is ' + result;
+        return results;
       },
-      output(){
-        console.log('The parameters are ' + parm1, parm2);
+      output() {
+        console.log('Calling output function ' + parm1, parm2);
       }
     };
   }
-  createCircle(circle1,5,2,add);
+  const circle1 = createCircle(5,2);
+  console.log('logging the circle1 object')
+  console.log(circle1);
+  console.log('logging the circle1.myfunc() function');
+  console.log(circle1.myfunc());
+  circle1.output();
+  console.log('Calling the circle1.myfunc() function');
+  let final_result = circle1.myfunc();
+  console.log('Logging the return value from circle1.myfunc() ' + final_result);
 </script>
 </body>
 </html>

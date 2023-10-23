@@ -256,17 +256,47 @@ for (let color of colors)
 ## Factory Functions
 1. Just like constructor functions, it is used to create objects. In other words, a factory function is a function that can return a newly created object. 
   ```javascript
-  function createCircle(newObject,parm1,parm2,func1){
-    const newObject{
-      parm1,
-      parm2,
-      func1(){
+function createCircle(parm1,parm2,func1){
+    return {
+      parm1: parm1,
+      parm2: parm2, 
+      myfunc() {
+        console.log('Calling myfunc ');
         result = parm1+parm2;
+        results = 'The addition is ' + result;
+        return results;
       },
-      output(){
-        console.log('The parameters are ' + parm1, parm2);
+      output() {
+        console.log('Calling output function ' + parm1, parm2);
       }
-    }
+    };
   }
+  const circle1 = createCircle(5,2);
+  console.log('logging the circle1 object')
+  console.log(circle1);
+  console.log('logging the circle1.myfunc() function');
+  console.log(circle1.myfunc());
+  circle1.output();
+  console.log('Calling the circle1.myfunc() function');
+  let final_result = circle1.myfunc();
+  console.log('Logging the return value from circle1.myfunc() ' + final_result);
   
+
+// Output
+// logging the circle1 object
+// {parm1: 5, parm2: 2, myfunc: ƒ, output: ƒ}
+// logging the circle1.myfunc() function
+// Calling myfunc 
+// The addition is 7
+// Calling output function 5 2
+// Calling the circle1.myfunc() function
+// Calling myfunc 
+// Logging the return value from circle1.myfunc() The addition is 7
 ```
+
+> 1. We can directly return an object from a function.
+> 2. We can pass parameters to the function and create object variables accordingly.
+> 3. We can also create functions inside objects and return it
+>
+
+
