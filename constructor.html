@@ -9,12 +9,17 @@
   <H1> Constructor</H1>
   <script>
 function Circle(radius) {
+  console.log('A new object is created using', radius);
   this.radius = radius;
   this.draw = function(){
     console.log('draw');
   }
-}
 
+}
+ new Circle(1);
+ new Circle(2);
+ const dummy = new Circle(3);
+ dummy.draw();
 
   </script>
 </body>
