@@ -9,7 +9,7 @@
 <h1>Factory Function</h1>    
 
 <script>
-function createCircle(parm1,parm2,func1){
+function createCircle(parm1,parm2){
     return {
       parm1: parm1,
       parm2: parm2, 
@@ -25,14 +25,15 @@ function createCircle(parm1,parm2,func1){
     };
   }
   const circle1 = createCircle(5,2);
-  console.log('logging the circle1 object')
+  console.log('>>>>>logging the circle1 object')
   console.log(circle1);
-  console.log('logging the circle1.myfunc() function');
+  console.log('>>>>>logging the circle1.myfunc() function');
   console.log(circle1.myfunc());
+  console.log('>>>>>Calling the circle1.output() function directly');
   circle1.output();
-  console.log('Calling the circle1.myfunc() function');
+  console.log('>>>>>Assigning the output of myfunc() to a variable called final_result');
   let final_result = circle1.myfunc();
-  console.log('Logging the return value from circle1.myfunc() ' + final_result);
+  console.log('>>>>>Logging the return value from circle1.myfunc() ' + final_result);
 </script>
 </body>
 </html>
