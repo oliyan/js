@@ -270,7 +270,7 @@ function createCircle(parm1,parm2,func1){
         console.log('Calling output function ' + parm1, parm2);
       }
     };
-  }
+  } 
   const circle1 = createCircle(5,2);
   console.log('logging the circle1 object')
   console.log(circle1);
