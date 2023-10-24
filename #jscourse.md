@@ -344,3 +344,19 @@ console.log(circle);
 
 ## Constructor Property of Objects
 1. Every object in JS has a property called constructor. And that points the function that was used to contruct/create the object.
+
+```javascript
+let name = 'Ravi' // strings
+let isEmployed = true; // boolean
+let maritalStatus = undefined; // undefined
+let salary = null; // null
+
+let person = {name: 'Ravi', age: 31}; // declare an object
+person.name = 'Mary'; // dot notation
+
+let colorarray = ['blue', 'yellow', 'red']; // declare an array
+
+
+
+
+```

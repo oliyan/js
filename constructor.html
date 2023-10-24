@@ -8,17 +8,33 @@
 <body>
   <H1> Constructor</H1>
   <script>
-function Circle(radius) {
-  console.log('A new object is created using', radius);
+function Circle(radius,conname) {
+  console.log('A new outer object is created using', radius, 'by', conname);
   this.radius = radius;
+  this.user = conname;
+  this.contrix = 
+  function Concentrix(conradius, conname, userr){
+    this.conname = conname;
+    console.log('A new', conname, ' is created using', conradius, 'by', userr);
+    conradius: conradius;
+  }
   this.draw = function(){
     console.log('draw');
   }
 
 }
- new Circle(1);
- const dummy = new Circle(3);
- dummy.draw();
+  new Circle(1,'ravisankar');
+  const outer = new Circle(3,'ravi and saved to const outer');
+  console.log('>>> Logging the contructor of inner object-contrix, referred by outer object')
+  console.log(outer.contrix.constructor + ' >> Note it is referred as native code');
+  console.log('>>> Logging the contructor of outer object')
+  console.log(outer.constructor);
+  const inner = new outer.contrix(1, 'inner_object', 'innerRavi');
+  console.log('>>> Logging the contructor of inner object-contrix referred by the newly created object name')
+  console.log(inner.constructor);
+
+  let myvar1 = 1;
+  console.log(myvar1.constr)
 
   </script>
 </body>
