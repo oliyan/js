@@ -324,7 +324,7 @@ function Circle(radius) {
 ```
 
 ## Dynamic Nature of objects.
-Function's properties and objects are dynamic. i.e. we can create/edit/delete an object's property after it is created. Only limitation is that we cannot assign.
+Function's properties and objects are dynamic. i.e. we can create/edit/delete an object's property after it is created. Only limitation is that we clear the entire memory.
 
 ```Javascript
 
