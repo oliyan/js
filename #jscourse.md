@@ -324,7 +324,7 @@ function Circle(radius) {
 ```
 
 ## Dynamic Nature of objects.
-Function's properties and objects are dynamic. i.e. we can create/edit/delete an object's property after it is created. Only limitation is that we clear the entire memory.
+Function's properties and objects are dynamic. i.e. we can create/edit/delete an object's property after it is created. Only limitation is that we cannot reassign the object variable.
 
 ```Javascript
 
@@ -341,3 +341,6 @@ delete circle.color; // delete any property
 console.log(circle); 
 }
 ```
+
+## Constructor Property of Objects
+1. Every object in JS has a property called constructor. And that points the function that was used to contruct/create the object.
