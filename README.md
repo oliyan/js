@@ -7,10 +7,10 @@ my javascript learning
 
 ## Resource list
 ### Linux 
-1. [Linuxsurvival - Basic Tutorial](https://linuxsurvival.com/linux-tutorial-introduction/)
+1. [Linuxsurvival - Basic Tutorial game](https://linuxsurvival.com/linux-tutorial-introduction/)
+2. [Terminus - Adventurous game](https://web.mit.edu/mprat/Public/web/Terminus/Web/main.html)
 
-## Javascript
-2. [CodeWithMosh](https://members.codewithmosh.com/courses/enrolled/1896395)
-3. [JS Robot Game](https://lab.reaal.me/jsrobot)
-4. 
-
+### Javascript
+1. [CodeWithMosh](https://members.codewithmosh.com/courses/enrolled/1896395)
+2. [JS Robot Game](https://lab.reaal.me/jsrobot)
+3. 
