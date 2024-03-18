@@ -34,7 +34,8 @@ app.get('/', function(req, res){
 });
 
 ```
-**Step-4: Install nodemon to auto restart the node server**
+___
+**TIP: Install nodemon to auto restart the node server**
 ```bash
 npm i -D nodemon # used to restart the node server whenever we make code change in server.js
 ```
@@ -52,4 +53,28 @@ If yes, then add an entry in the scripts section as below
 ```
 The above key value pair means, whenever I run the script named dev, the `nodemon server.js` command would be executed. Thus ensuring restarting of node js server whenever a change is detected!
 
-https://youtu.be/TYUK2TsxQjc?t=937
+
+___
+
+#### Point to an external HTML file instead serving content directly
+
+So far we're only getting requests and we're sending responses as plain text (of course, with HTML), but it is best to point to an HTML document to serve. To do that follow the steps below.
+1. Create an empty HTML file in the *myapp1* directory and design it to your liking.
+2. Modify the server.js as below.
+```js
+app.get('/', function(req, res){
+    // Instead of sending the response as plain text, we can send HTML files to be rendered as below.
+    res.sendFile("/home/RAVI1/builds/js/myapp1/index.html");
+});
+```
+3. Restart node.js by issuing the below command
+`npm run dev`
+![alt text](image.png)
+
+**TIP: Use Relative path instead of Absolute Path for sendFile method**
+It is best to use relative path to the current working directory to point files and serve content. To accomplish that we need to import a node module called *path*. 
+```js
+const = 
+```
+
+https://youtu.be/TYUK2TsxQjc?t=768
