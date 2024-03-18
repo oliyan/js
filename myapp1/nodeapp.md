@@ -1,5 +1,13 @@
 # Create a new app
 **Step-1: Install Node**
+Go to OSPM (Open Source Package Management) from the ACS application and click on the "Available Packages" to see which node versions are available to you. For me version 14 is the latest available version
+![alt text](image-1.png)
+```bash
+yum install nodejs14 #notice the version 14
+```
+ 
+
+**Step-1.1: Initialize the node**
     Create a folder. Change Directory to the newly created folder and initialize a node project.
 
 ```bash
@@ -51,7 +59,10 @@ If yes, then add an entry in the scripts section as below
     "dev": "nodemon server.js"
   }
 ```
-The above key value pair means, whenever I run the script named dev, the `nodemon server.js` command would be executed. Thus ensuring restarting of node js server whenever a change is detected!
+The above key value pair means, whenever I run the script named dev, the `nodemon server.js` command would be executed. Thus ensuring restarting of node js server whenever a change is detected! The command to start the nodemon instance is below
+```bash
+npm run dev # dev - signifies the script name that we previously edited!
+```
 
 
 ___
