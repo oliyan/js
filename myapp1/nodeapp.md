@@ -85,7 +85,7 @@ app.get('/', function(req, res){
 **TIP: Use Relative path instead of Absolute Path for sendFile method**
 It is best to use relative path to the current working directory to point files and serve content. To accomplish that we need to import a node module called *path*. 
 ```js
-const = 
+const path = require('path'); // Import the path module to the constant path
 ```
 
 https://youtu.be/TYUK2TsxQjc?t=768

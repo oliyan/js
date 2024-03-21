@@ -347,3 +347,48 @@ console.log(circle);
 
 
 ## Functions are objects
+
+___
+
+# Callbacks and promise
+## Callback: 
+A callback is a function that is passed as an argument to another function and is executed after its parent function has completed. Callbacks are often used in asynchronous operations such as reading files or making HTTP requests where you don’t know when the operation will complete. Here’s a simple example:
+
+```JavaScript
+
+function greet(name, callback) {
+    console.log('Hello ' + name);
+    callback();
+}
+
+greet('John', function() {
+    console.log('The greeting is done.');
+});
+```
+
+In this example, the anonymous function `function() { console.log('The greeting is done.'); }` is a callback that is called after the greet function is done.
+
+## Promise: 
+A Promise is an object that represents the eventual completion or failure of an asynchronous operation. It returns a single value which is either a value (in case of success) or a reason (in case of failure). Promises are used to handle asynchronous operations in a more flexible way than callbacks. Here’s a simple example:
+
+```JavaScript
+
+let promise = new Promise(function(resolve, reject) {
+    // some code
+    if (/* everything turned out fine */) {
+        resolve("Stuff worked!");
+    } else {
+        reject(Error("It broke"));
+    }
+});
+
+promise.then(function(result) {
+    console.log(result); // "Stuff worked!"
+}, function(err) {
+    console.log(err); // Error: "It broke"
+});
+```
+
+In this example, the new Promise constructor takes a function as an argument. This function takes two parameters: resolve and reject, which are both functions. If the operation was successful, resolve is called with the resulting value. If the operation failed, reject is called with the error.
+
+In summary, both callbacks and promises are used for handling asynchronous operations in JavaScript, but promises provide a more powerful and flexible mechanism for chaining asynchronous operations together.
