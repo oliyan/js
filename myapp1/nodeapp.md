@@ -23,7 +23,7 @@ npm i express ejs idb-pconnector  # required packages
 ```
 
 **Step-3: Create your first node app**
-- `touch express.js` to create a new JS file called server
+- `touch server.js` to create a new JS file called server
 - Paste the below code in the new file
 
 ```js
