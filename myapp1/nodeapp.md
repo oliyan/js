@@ -38,16 +38,27 @@ app.listen(port, function(){ // the listen method takes two params. 1) Port#, 2)
 });
 
 app.get('/', function(req, res){
-    res.send("Hello world!");
+    res.send("<h1>Hello World!</h1>");
 });
 
 ```
+**Step-4: Start the node instance**
+Head over to terminal, change directory to the *"myapp1"* and run the below command to start the node instance!
+```bash
+node server.js
+```
+Go to the browser and enter your server's IP followed by the port number. 
+In our case it is, **192.168.105.5:7592**
+![alt text](image-2.png). 
+Congratulations on creating your first web app!
 ___
 **TIP: Install nodemon to auto restart the node server**
+
 ```bash
+#Bash
 npm i -D nodemon # used to restart the node server whenever we make code change in server.js
 ```
-Once installed, go to the packages.json and check the below entry is found at the bottom
+Once installed, go to the **packages.json** and check the below entry is found at the bottom
 ```json
   "devDependencies": {
     "nodemon": "^3.1.0"
@@ -61,7 +72,8 @@ If yes, then add an entry in the scripts section as below
 ```
 The above key value pair means, whenever I run the script named dev, the `nodemon server.js` command would be executed. Thus ensuring restarting of node js server whenever a change is detected! The command to start the nodemon instance is below
 ```bash
-npm run dev # dev - signifies the script name that we previously edited!
+#BASH
+npm run dev #dev - signifies the script name that we previously edited!
 ```
 
 
