@@ -100,4 +100,7 @@ It is best to use relative path to the current working directory to point files 
 const path = require('path'); // Import the path module to the constant path
 ```
 
+
+>Further Reading
 https://youtu.be/TYUK2TsxQjc?t=768
+https://www.npmjs.com/package/idb-pconnector/v/0.1.1?activeTab=readme
