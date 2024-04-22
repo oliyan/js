@@ -12,7 +12,7 @@ function fizzbuzz(v_num) {
   return 'Not a Number'
   
   return v_num; // return the number if all else
-
+  
 }
 
 let num = 30;
