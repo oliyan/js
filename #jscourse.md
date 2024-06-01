@@ -392,3 +392,9 @@ promise.then(function(result) {
 In this example, the new Promise constructor takes a function as an argument. This function takes two parameters: resolve and reject, which are both functions. If the operation was successful, resolve is called with the resulting value. If the operation failed, reject is called with the error.
 
 In summary, both callbacks and promises are used for handling asynchronous operations in JavaScript, but promises provide a more powerful and flexible mechanism for chaining asynchronous operations together.
+
+- 29 https://codewithmosh.com/p/the-ultimate-html-css 
+- 15 https://codewithmosh.com/p/ultimate-react-part1
+- 15 [React 18: Intermediate Topics (codewithmosh.com)](https://codewithmosh.com/p/ultimate-react-part2)
+- 10 [The Ultimate TypeScript Course (codewithmosh.com)](https://codewithmosh.com/p/the-ultimate-typescript)
+- 15 NodeJS
