@@ -1,3 +1,8 @@
+# Setup
+- VS Code
+- NodeJS
+- Live Server (VS Code Extension)
+
 # Basics
 ## Variables
 - Cannot be started with a number
@@ -19,6 +24,10 @@ let salary = null; // null
 
 
 ## Reference Types / Dynamic Types
+1. Object
+2. Array
+3. Function
+
 - Object 
  >Access the objects' attributes by either a dot or bracket notation.
    ```javascript 
@@ -36,6 +45,10 @@ let salary = null; // null
 - Function
   - Just like python or any other function available in modern programming language. 
 
+To put it all together. Take a look at this array
+```js
+ let z = [1,"momo", true, undefined, {name: 'ravi'}, [{name: 'sankar', age: '31'}, {name: 'anu', age: 31}],(function() {let name = 'World'; return 'Hello ' + name;})() ]
+```
 ---
 
 # Operators
@@ -391,4 +404,4 @@ promise.then(function(result) {
 
 In this example, the new Promise constructor takes a function as an argument. This function takes two parameters: resolve and reject, which are both functions. If the operation was successful, resolve is called with the resulting value. If the operation failed, reject is called with the error.
 
-In summary, both callbacks and promises are used for handling asynchronous operations in JavaScript, but promises provide a more powerful and flexible mechanism for chaining asynchronous operations together.
+In summary, both callbacks and promises are used for handling asynchronous operations in JavaScript, but promises provide a more powerful and flexible mechanism for chaining asynchronous operations together.  
