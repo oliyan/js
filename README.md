@@ -401,8 +401,33 @@ myNum.square = 64; //added a new property called square and immediately this myN
 
 
 ## Functions are objects
+1. Know that any function is actually an object by itself. 
+  ```js
+  function multiply(a,b){
+    return a*b
+  }
+  ```
+2. When we create a function like above, under the hood it is created like this.
+  ```js
+  const multiply = new Function('a','b',`return a*b`);
 
-___
+  ```
+3. Since the function `multiply` is treated as on object, we can access properties and methods as below.
+ ```js
+ mutiply.length //  The number of arguments the function is expected to take.
+ multiply.name // The name of the function
+ multiply.prototype // The prototype object, used for implementing inheritance. 
+ multiply.call({},2,3); // Calls the function multiply.
+ multiply.apply({},[2,3]) // Calls the function multiply, but params are enclosed in an array.
+ ```  
+ 4. Let's say if we have a constructor function, and to invoke the function we use `new` operator. Using the `new` operator is nothing but,
+  ```js
+  mutiply.call({},2,3)
+  new mutiply(2,3);
+
+  // the above two lines are one and the same.
+  ```
+---
 
 # Callbacks and promise
 ## Callback: 
@@ -463,4 +488,4 @@ In summary, both callbacks and promises are used for handling asynchronous opera
 4. https://codewithmosh.com/p/ultimate-react-part1
 5. [React 18: Intermediate Topics (codewithmosh.com)](https://codewithmosh.com/p/ultimate-react-part2)
 6. [The Ultimate TypeScript Course (codewithmosh.com)](https://codewithmosh.com/p/the-ultimate-typescript)
-7. NodeJS Cours by Mosh
+7. NodeJS Course by Mosh
