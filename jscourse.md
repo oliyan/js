@@ -245,7 +245,7 @@ for (let color of colors)
 # Objects
 
 ## Definition and declaration
-1. Objects are a collection of key value pairs.
+1. Objects are just a collection of key value pairs.
 2. can be declared using ```const objectname = {}``` or ``` let objectname = {}``` Inside the curly braces, we can declare variables, arrays, functions(that may operate on the declared variables) and even objects.
 3. Note that the functions inside an object is called as "method"
 4. Object, just like any other variable ends with a ```;```
@@ -268,7 +268,8 @@ for (let color of colors)
 
 ## Factory Functions
 1. Just like constructor functions, it is used to create objects. In other words, a factory function is a function that can return a newly created object. 
-  ```javascript
+
+```js
 function createCircle(parm1,parm2){
     return {
       parm1: parm1,
@@ -294,7 +295,6 @@ function createCircle(parm1,parm2){
   console.log('>>>>>Assigning the output of myfunc() to a variable called final_result');
   let final_result = circle1.myfunc();
   console.log('>>>>>Logging the return value from circle1.myfunc() ' + final_result);
-  
 
 // Output
 // >>>>>logging the circle1 object
@@ -307,8 +307,6 @@ function createCircle(parm1,parm2){
 ///>>>>>Assigning the output of myfunc() to a variable called final_result
 // Calling myfunc 
 // >>>>>Logging the return value from circle1.myfunc() The addition is 7
-
-
 ```
 
 > 1. We can directly return an object from a function.
