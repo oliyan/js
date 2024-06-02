@@ -152,9 +152,9 @@ switch (role)
 }
 ```
 **Take aways,**
-1. Like SQL, we have to define what are we switching first and then followed by cases. The whole switch block don't need ;
+1. Like SQL, we have to define what are we switching first and then followed by cases. The whole switch block don't need to be terminated by ;
 2. Each cases need to be terminated by :
-3. We need to specify ```break;``` to break out of the case. or else all the cases will be executed if the condition passes.
+3. We need to specify ```break;```  explicitly to break out of the case. or else all the cases will be executed if the condition passes.
 4. The ```other``` equivalent in RPGLE is ```default:```. This don't need ```break;``` as it will be the last part of the switch case that will be executed. 
 
 ### For Loop
@@ -174,7 +174,7 @@ for (let i = 1; i <= 10; i++)
 // While loop checks the condition at entry.
 
 let i = 1;
-while (i <= 10)
+while ( i <= 10)
 {
   if (i % 2 == 0)
     console.log(i);
@@ -222,7 +222,7 @@ for (let idx in colors)
 ```
 
 **Take aways,**
-1. The "For in" loop is used to traverse between the list (a.k.a array) or object (that contains multiple properties). Or simply, it means, iterating over the indexes. 
+1. The "For in" loop is used to traverse between the list (a.k.a array) or object (that contains multiple properties). Or simply, it means, **iterating over the indexes.**
 
 
 ### For-of 
@@ -235,7 +235,7 @@ for (let color of colors)
 
 **Take-aways**
 1. For of is used to directly get the values of an array. Whereas For in is used to get the index first.
-2. For in can be used in both arrays and objects. But For ofs can be mostly used in arrays only.
+2. **For in can be used in both arrays and objects. But For ofs can be mostly used in arrays only.**
 
 ### Modify Control Flow
 1. Use ```break;``` to break the loop.
