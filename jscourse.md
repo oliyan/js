@@ -45,9 +45,28 @@ let salary = null; // null
 - Function
   - Just like python or any other function available in modern programming language. 
 
-To put it all together. Take a look at this array
+To put it all together. Take a look at this array and the list of objects/data types
 ```js
  let z = [1,"momo", true, undefined, {name: 'ravi'}, [{name: 'sankar', age: '31'}, {name: 'anu', age: 31}],(function() {let name = 'World'; return 'Hello ' + name;})() ]
+
+let number = 42;
+let string = "Hello, world!";
+let boolean = true;
+let obj = { key: "value" };
+let func = function() {};
+let symbol = Symbol("sym");
+let undef = undefined;
+let nul = null;
+
+console.log(typeof number);  // "number"
+console.log(typeof string);  // "string"
+console.log(typeof boolean); // "boolean"
+console.log(typeof obj);     // "object"
+console.log(typeof func);    // "function"
+console.log(typeof symbol);  // "symbol"
+console.log(typeof undef);   // "undefined"
+console.log(typeof nul);     // "object" (special case)
+
 ```
 ---
 
@@ -261,15 +280,20 @@ for (let color of colors)
       console.log('drawing at the position', this.location.x, this.location.y);
     }
   };
-```
-> circle.draw(); // Method
-> drawing at the position 1 2
-  
+
+  //Output
+  // circle.draw(); // The draw() method is called 
+  // drawing at the position 1 2
+  ```  
 
 ## Factory Functions
 
-1. Just like constructor functions, it is used to create objects. In other words, a factory function is a function that can return a newly created object. 
+1. A factory function is a function that can return a newly created object. 
 2. It is convention to define a Factory function in camelNotation()
+3. We can directly return an object from a function.
+4. We can pass parameters to the function and create object variables accordingly.
+5. We can also create functions inside objects and return it
+
 
 ```js
 function createCircle(parm1,parm2){
@@ -311,17 +335,16 @@ function createCircle(parm1,parm2){
 // >>>>>Logging the return value from circle1.myfunc() The addition is 7
 ```
 
-> 1. We can directly return an object from a function.
-> 2. We can pass parameters to the function and create object variables accordingly.
-> 3. We can also create functions inside objects and return it
->
+
 
 
 ## Constructor Function.
-1. Constructor Functions are defined as PascalNotation()  
-2.  Constructors provide a blueprint for creating multiple objects with the same structure and behavior, promoting code reuse and encapsulation.
-3.  It is invoked with a new keyword.
-4.  Inside the constructor function, `this` refers to the newly created object, allowing properties and methods to be assigned to it.
+1. Just like factory function, the job of a constructor is to create an object. 
+2. Constructor Functions are defined as PascalNotation()  
+3. Constructors provide a blueprint for creating multiple objects with the same structure and behavior, promoting code reuse and encapsulation.
+4. It is invoked with a `new` operator.
+5. Inside the constructor function, `this` refers to the newly created object, allowing properties and methods to be assigned to it.
+6. We don't have to explicitly return the object to the caller. It is done under the hood.
 
 ```Javascript
 function Circle(radius) {
@@ -338,10 +361,19 @@ function Circle(radius) {
 
 ```
 
+## Key differences b/w Constructor & Factory Functions
+| Factory | Constructor |
+| -- | -- |
+| A new object is returned to the caller using `Return` Keyword | There is no return keyword, but the constructor function will return the object when called. 
+| Can be identified by explicit use of `return` keyword | Can be identified by explicit use of `this` keyword. It is used to refer the newly created object
+| camelNotation() | PascalNotation()
+| `const dummy = createCircle(1)` | `const dummy = new Circle(1)`
+
+
 ## Dynamic Nature of objects.
 Function's properties and objects are dynamic. i.e. we can create/edit/delete an object's property after it is created. Only limitation is that we cannot reassign the object variable.
 
-```Javascript
+```js
 
 const circle = {
   radius: 1
@@ -356,9 +388,16 @@ delete circle.color; // delete any property
 console.log(circle); 
 }
 ```
+**Note**: It is also possible to convert a primitive data type to an object, take a look at the code below.
+```js
+let myNum = 8; // declared a primitive data type number
+typeof myNum // 'number'
+myNum.square = 64; //added a new property called square and immediately this myNum will be converted to an object.
+
+```
 
 ## Constructor Property of Objects
-1. Every object in JS has a property called constructor. And that points the function that was used to contruct/create the object.
+1. Every object in JS has a property called constructor. And that points the function that was used to construct/create the object.
 
 
 ## Functions are objects
