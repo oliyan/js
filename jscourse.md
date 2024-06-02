@@ -267,7 +267,9 @@ for (let color of colors)
   
 
 ## Factory Functions
+
 1. Just like constructor functions, it is used to create objects. In other words, a factory function is a function that can return a newly created object. 
+2. It is convention to define a Factory function in camelNotation()
 
 ```js
 function createCircle(parm1,parm2){
@@ -316,8 +318,10 @@ function createCircle(parm1,parm2){
 
 
 ## Constructor Function.
-1. Constructor Functions are defined as PascalNotation()
-2. Whereas, Factory Functions are defined as camelNotation()
+1. Constructor Functions are defined as PascalNotation()  
+2.  Constructors provide a blueprint for creating multiple objects with the same structure and behavior, promoting code reuse and encapsulation.
+3.  It is invoked with a new keyword.
+4.  Inside the constructor function, `this` refers to the newly created object, allowing properties and methods to be assigned to it.
 
 ```Javascript
 function Circle(radius) {
