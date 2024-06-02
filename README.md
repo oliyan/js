@@ -2,7 +2,7 @@
 my javascript learning
 ---
 
-#jscourse.md contains my learning path.
+[jscourse.md](jscourse.md) contains my learning path.
 
 
 ## Resource list
