@@ -30,10 +30,12 @@ let salary = null; // null
 
 - Object 
  >Access the objects' attributes by either a dot or bracket notation.
-   ```javascript 
+   ```js 
   let person = {name: 'Ravi', age: 31}; // declare an object
   person.name = 'Mary'; // dot notation
   person['name'] = 'John';  // bracket notation
+  Object.keys(person) // [ 'name', 'age' ]
+  Object.entries(person) // [ [ 'name', 'John' ], [ 'age', 31 ] ]
   ```
  
 
@@ -428,6 +430,68 @@ myNum.square = 64; //added a new property called square and immediately this myN
   // the above two lines are one and the same.
   ```
 ---
+
+
+## Value vs Reference
+- Primitive data types are copied/accessed by the values.
+  ```js
+  let x = 10;
+  let y = x;
+  x = 20;
+  console.log(y); // 10
+  console.log(x); // 20
+  ```
+
+- Reference data types are copied/accessed by their address.
+  ```js
+  let x = {value: 10};
+  let y = x;
+  x.value = 20;
+  y.value = 35;
+
+  console.log(x.value); // 35
+  console.log(y.value); // 35
+  ```
+## Cloning the objects
+```js
+let person = {name: 'Ravi', age: 31}; // declare an object
+
+// 1. Copy by iterating the key value pairs
+let another = {}; // initialize an empty object
+for (let key in person)
+  another[key] = person[key];
+
+// 2. Copy by using the assign method
+const another = Object.assign({}, person); // { name: 'John', age: 31 }
+// or
+const another = Object.assign({sex: 'M'}, person); // { sex: 'M', name: 'John', age: 31 }
+
+// 3. Copy by using spread operator
+const another = {...person}
+```
+**Note:**
+1. The `another[key]` in LHS means, we are initializing a new key. Whereas the `person[key]` in RHS means we are getting the value of the already defined key in person object.
+2. Object.assign method is nothing but merging two objects together to create a third one. In first example, we have merged with an empty object. In secnod example, we have merged with a sex keypair.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # Callbacks and promise
 ## Callback: 
