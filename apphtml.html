@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Table with Checkboxes</title>
+    </head>
+<body>
+
+
+  <table>
+    <th>
+      <td> one</td>
+      <td> two</td>
+    </th>
+    <tr>
+        <td>Name1</td>
+        <td><input type="checkbox" class="checkbox" checked></td>
+    </tr>
+    <tr>
+        <td>Name2</td>
+        <td><input type="checkbox" class="checkbox"></td>
+    </tr>
+    <tr>
+        <td>Name3</td>
+        <td><input type="checkbox" class="checkbox" checked></td>
+    </tr>
+    <tr>
+        <td>Name4</td>
+        <td><input type="checkbox" class="checkbox"></td>
+    </tr>
+    <tr>
+        <td>Name5</td>
+        <td><input type="checkbox" class="checkbox" checked></td>
+    </tr>
+</table>
+<button onclick="getCheckedNames()">Get Checked Names</button>
+
+
+<script>
+function getCheckedNames() {
+    let checkboxes = document.querySelectorAll('input[type=checkbox]');
+    let names = document.querySelectorAll('td:not(:nth-child(2))');
+    let data = [];
+
+    for (let i = 0; i < checkboxes.length; i++) {
+        let obj = {
+            'Name': names[i].innerText,
+            'Checked': checkboxes[i].checked
+        };
+        data.push(obj);
+    }
+
+    console.log(data);
+}
+
+</script>
+</body>
+</html>

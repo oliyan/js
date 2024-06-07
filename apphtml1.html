@@ -1,0 +1,41 @@
+<!-- HTML -->
+<table id="myTable">
+  <tr>
+    <th>Name</th>
+    <th>Selected</th>
+  </tr>
+  <tr>
+    <td>John</td>
+    <td><input type="checkbox" class = "rc" value="checked"></td>
+  </tr>
+  <tr>
+    <td>Jane</td>
+    <td><input type="checkbox"></td>
+  </tr>
+  <!-- Add more rows as needed -->
+</table>
+
+<button onclick="getSelections()">Get Selections</button>
+
+<script>
+// JavaScript
+function getSelections() {
+  var table = document.getElementById("myTable");
+  var rows = table.getElementsByTagName("tr");
+  var selections = [];
+
+  for (var i = 1; i < rows.length; i++) {
+    var cells = rows[i].getElementsByTagName("td");
+    var name = cells[0].innerText;
+    var checkbox = cells[1].getElementsByTagName("input")[0];
+    var isSelected = checkbox.checked;
+
+    selections.push({
+      name: name,
+      selected: isSelected
+    });
+  }
+
+  console.log(selections); // Log the array to the console
+}
+</script>
