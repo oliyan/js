@@ -28,7 +28,7 @@ let salary = null; // null
 2. Array
 3. Function
 
-- Object 
+- **Object** 
  >Access the objects' attributes by either a dot or bracket notation.
    ```js 
   let person = {name: 'Ravi', age: 31}; // declare an object
@@ -37,14 +37,12 @@ let salary = null; // null
   Object.keys(person) // [ 'name', 'age' ]
   Object.entries(person) // [ [ 'name', 'John' ], [ 'age', 31 ] ]
   ```
- 
-
-- Array
+- **Array**
   - Index start at 0
   - Can be a homogenous or hetergenous type of elements
   - ```let colorarray = ['red','blue','green']```
   - ```const emptyArray = new Array(10);``` - Declaring a new empty array with the length 10.
-- Function
+- **Function**
   - Just like python or any other function available in modern programming language. 
 
 To put it all together. Take a look at this array and the list of objects/data types
@@ -68,7 +66,6 @@ console.log(typeof func);    // "function"
 console.log(typeof symbol);  // "symbol"
 console.log(typeof undef);   // "undefined"
 console.log(typeof nul);     // "object" (special case)
-
 ```
 ---
 
@@ -499,6 +496,48 @@ function radToDeg(rad) {
 ```
 
 ## String Object
+Just like Math object, there are also multiple properties and methods available in String object. Any variable that contains a 'String' is a string object. Some examples are,
+
+```js
+const text = 'Hello World';
+console.log(text.indexOf('World'));
+
+console.log(text.replace('Hello','Bye'));
+
+console.log(text.toUpperCase(text));
+
+```
+
+Refer [this](https://devdoc.net/web/developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string.html) link to know about the escape strings in JS.
+
+Note: We can use template literals in order to format a bigger string. It can be used with tilde sign while assigning string values. The `${}` is called placeholder. We can add any expression inside the curly braces. We can also call any function inside it that returns any value.
+
+```js
+let name = 'Ravi';
+let message = 
+`Hi ${name},
+  Thank you for learning javascript!
+
+Thanks,
+Sankar
+`
+```
+
+## Date Object
+
+- Denoted by `Date()`
+- Constructor Object
+- Once we create a new object using the Date() constructor function, we can invoke make use of multiple Date.methods in it.
+- Date() constructor can take multiple arguments to create a Date() object.
+- Some common date methods are,
+  - getXxx - To get the specific parts of the timestamp in specific format.
+  - setXxx - To assign values to the date operator.
+  - toXxx  - To convert the Date object to any data type.
+
+```js
+const now = new Date(); // Create a date object with current timestamp values in it.
+```
+
 
 
 
