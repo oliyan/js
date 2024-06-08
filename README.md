@@ -474,10 +474,35 @@ const another = {...person}
 2. Object.assign method is nothing but merging two objects together to create a third one. In first example, we have merged with an empty object. In secnod example, we have merged with a sex keypair.
 
 
+## Math object
+Math is a built-in js object that contains methods and static properties that are useful to do mathematical calculations. 
+```js
+//Example for Math.methods()
+//This function will return a random integer between two bounds.
+function random(min, max) {
+  const num = Math.floor(Math.random() * (max - min + 1)) + min;
+  return num;
+}
+
+random(1, 10);
+
+function degToRad(degrees) {
+  return degrees * (Math.PI / 180);
+}
+
+//Example of Math.properties
+//This function will convert between degrees and radians.
+function radToDeg(rad) {
+  return rad / (Math.PI / 180);
+}
+
+```
+
+## String Object
 
 
 
-
+ 
 
 
 
