@@ -468,7 +468,7 @@ const another = {...person}
 ```
 **Note:**
 1. The `another[key]` in LHS means, we are initializing a new key. Whereas the `person[key]` in RHS means we are getting the value of the already defined key in person object.
-2. Object.assign method is nothing but merging two objects together to create a third one. In first example, we have merged with an empty object. In secnod example, we have merged with a sex keypair.
+2. Object.assign method is nothing but merging two objects together to create a third one. In first example, we have merged with an empty object. In second example, we have merged with a sex keypair.
 
 
 ## Math object
