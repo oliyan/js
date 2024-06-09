@@ -543,10 +543,44 @@ const now = new Date(); // Create a date object with current timestamp values in
 
  # Arrays
  ## Some useful array methods
+ 1. push (add at last)
+ 2. unshit (add at first)
+ 3. pop (remove at last)
+ 4. shift (remove at first)
+ 5. splice (add/remove at middle)
+ 6. indexOf
+ 7. lastIndexOf
+ 8. includes
+ 9. concat
+ 10. slice
+
+**Note:** Array methods will always operate on the referenced object. Except slice and concat which will act on actual values (if the array is of primitive type)
 
 
  ## Find elements (for reference type)
+  - find() method is used to search for an array elements using user defined search criteria. 
+  - It takes a call back function as an input parameter (that we have to write in such a way it produces true or false output)
+  - That callback function is iterated against all the elements of the array.
+  - The iteration where our callback function is returning true, the find() method will return that particular element back.
+  - Take a look at the example below.
+  ```js
+  // define an array of objects
+  const courses = [
+  { id: 1, name: 'a' },
+  { id: 2, name: 'b' },
+  ];
+
+  // Use find() method and pass a callback function that checks for the condition if the name is equal to 'a'. If it is true, then the find() method will return the current element where the truthy occured. In our case, it is the object itself. 
+  const course = courses.find(function(course) {
+    return course.name === 'a';
+  });
+
+  console.log(course);
+
+  ```
+
 Below is a simplified implementation of the find method. Here we have used the name as myFind for differentiating the default find method.
+
  ```js
 Array.prototype.myFind = function(callback, thisArg) {
   if (typeof callback !== 'function') {
@@ -562,12 +596,20 @@ Array.prototype.myFind = function(callback, thisArg) {
   }
   return undefined;
 };
+```
 
- ```
+## Arrow Functions  
 
+```js
+//An example for normal function.
+const course = courses.find(function(eachElement) {
+  return eachElement.name === 'a';
+});
 
+//An example for arrow function.
+const course = courses.find(eachElement => eachElement.name === 'a');
 
-
+```
 
 
 
