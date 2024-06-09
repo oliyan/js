@@ -541,7 +541,29 @@ const now = new Date(); // Create a date object with current timestamp values in
 
 
 
- 
+ # Arrays
+ ## Some useful array methods
+
+
+ ## Find elements (for reference type)
+Below is a simplified implementation of the find method. Here we have used the name as myFind for differentiating the default find method.
+ ```js
+Array.prototype.myFind = function(callback, thisArg) {
+  if (typeof callback !== 'function') {
+    throw new TypeError(callback + ' is not a function');
+  }
+
+  const array = this;
+  for (let i = 0; i < array.length; i++) {
+    const element = array[i];
+    if (callback.call(thisArg, element, i, array)) {
+      return element;
+    }
+  }
+  return undefined;
+};
+
+ ```
 
 
 
