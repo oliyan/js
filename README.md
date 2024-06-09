@@ -553,6 +553,8 @@ const now = new Date(); // Create a date object with current timestamp values in
  8. includes
  9. concat
  10. slice
+ 11. find
+ 12. forEach
 
 **Note:** Array methods will always operate on the referenced object. Except slice and concat which will act on actual values (if the array is of primitive type)
 
@@ -610,7 +612,14 @@ const course = courses.find(function(eachElement) {
 const course = courses.find(eachElement => eachElement.name === 'a');
 
 ```
-
+## forEach
+forEach() method will call a custom defined function for every elements present in the array.
+```js
+var array1 = [ 5, 10, 15, 16, 17, 18]
+array1.forEach(items => console.log(items));
+array1.forEach((items, index) => console.log(index, items));
+```
+Another good example is that we can use forEach to get the index and values in a single loop. Previously we were using `for in` and `for of` loops for this.
 
 
 
