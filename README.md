@@ -2,7 +2,7 @@
 - VS Code
 - NodeJS
 - Live Server (VS Code Extension)
-
+ 
 # Basics
 ## Variables
 - Cannot be started with a number
