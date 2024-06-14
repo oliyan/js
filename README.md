@@ -550,7 +550,7 @@ const now = new Date(); // Create a date object with current timestamp values in
  5. splice (add/remove an element at middle position)
  6. indexOf (returns first occurrence of a searchString, takes start position as 2nd parameter)
  7. lastIndexOf (returns first occurrence of searchString, takes start position as 2ns parameter, but searches from right to left)
- 8. includes
+ 8. includes 
  9. concat
  10. slice
  11. find
