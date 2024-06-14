@@ -2,7 +2,7 @@
 - VS Code
 - NodeJS
 - Live Server (VS Code Extension)
-
+ 
 # Basics
 ## Variables
 - Cannot be started with a number
@@ -554,11 +554,16 @@ const now = new Date(); // Create a date object with current timestamp values in
  9. concat
  10. slice
  11. find
- 12. forEach
- 13. join (join elements in an array and store it in a string)
- 14. split (split a string using a separator and store it in an array)
- 15. sort 
- 16. reverse
+ 12. join (Works on Arrays. outputs a string by concatenating all the elements)
+ 13. split (Works on Strings. outputs an array by splitting the elements based on input character)
+ 14. sort (sort the arrary. Can use a callback function to sort object keys using their property values)
+ 15. reverse (reverse sort)
+ 16. forEach (runs a function for all elements)
+ 17. every (RAFFAEL till one false is returned)
+ 18. some  (RAFFAEL till one true is returned)
+ 19. filter(RAFFAEL to check for the expression, if true append them in a new array and return)
+ 20. map   (RAFFAEL and return a new array)
+ 21. reduce(RAFFAEL that takes two parameters to accumulate the elements in an array)
 
 **Note:** Array methods will always operate on the referenced object. Except slice and concat which will act on actual values (if the array is of primitive type)
 
@@ -628,7 +633,25 @@ Another good example is that we can use forEach to get the index and values in a
 
 
 
+## sort
+```js
+let courses = [
+  {id: 1, name: 'Node'},
+  {id: 2, name: 'Java'}
+];
 
+// Using the normal callback function
+courses.sort(function(a,b){
+  if (a.name < b.name) return -1;
+  if (a.name > b.name) return 1;
+  return 0;
+});
+
+// Using the arrowfunction with single line of code
+courses.sort((a, b) => a.name.localeCompare(b.name));
+
+console.log(courses)
+```
 
 
 
