@@ -543,13 +543,13 @@ const now = new Date(); // Create a date object with current timestamp values in
 
  # Arrays
  ## Some useful array methods
- 1. push (add at last)
- 2. unshit (add at first)
- 3. pop (remove at last)
- 4. shift (remove at first)
- 5. splice (add/remove at middle)
- 6. indexOf
- 7. lastIndexOf
+ 1. push (add an element at last position)
+ 2. unshit (add an element at first position)
+ 3. pop (remove an element at last position)
+ 4. shift (remove an element at first position)
+ 5. splice (add/remove an element at middle position)
+ 6. indexOf (returns first occurrence of a searchString, takes start position as 2nd parameter)
+ 7. lastIndexOf (returns first occurrence of searchString, takes start position as 2ns parameter, but searches from right to left)
  8. includes
  9. concat
  10. slice
@@ -566,6 +566,9 @@ const now = new Date(); // Create a date object with current timestamp values in
  21. reduce(RAFFAEL that takes two parameters to accumulate the elements in an array)
 
 **Note:** Array methods will always operate on the referenced object. Except slice and concat which will act on actual values (if the array is of primitive type)
+
+
+
 
 
  ## Find elements (for reference type)
