@@ -555,6 +555,10 @@ const now = new Date(); // Create a date object with current timestamp values in
  10. slice
  11. find
  12. forEach
+ 13. join (join elements in an array and store it in a string)
+ 14. split (split a string using a separator and store it in an array)
+ 15. sort 
+ 16. reverse
 
 **Note:** Array methods will always operate on the referenced object. Except slice and concat which will act on actual values (if the array is of primitive type)
 
