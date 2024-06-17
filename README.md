@@ -547,7 +547,7 @@ const now = new Date(); // Create a date object with current timestamp values in
  2. unshit (add at first)
  3. pop (remove at last)
  4. shift (remove at first)
- 5. splice (add/remove at middle)
+ 5. splice (add/remove at given position)
  6. indexOf
  7. lastIndexOf
  8. includes
@@ -564,6 +564,7 @@ const now = new Date(); // Create a date object with current timestamp values in
  19. filter(RAFFAEL to check for the expression, if true append them in a new array and return)
  20. map   (RAFFAEL and return a new array)
  21. reduce(RAFFAEL that takes two parameters to accumulate the elements in an array)
+ 22. spread(clone an array)
 
 **Note:** Array methods will always operate on the referenced object. Except slice and concat which will act on actual values (if the array is of primitive type)
 
