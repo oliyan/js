@@ -29,7 +29,9 @@ function newObj(name, value) {
 let newVar = {};
 for (let i = 1; i <= 10; i++) {
     if (isPrime(i)) {
-        newObj('num' + i, createCircle(1, 3));
+        newObj('circle' + i, createCircle(1, i));
     }
 }
 console.log(newVar);
+
+
