@@ -174,6 +174,28 @@ switch (role)
 2. Each cases need to be terminated by :
 3. We need to specify ```break;```  explicitly to break out of the case. or else all the cases will be executed if the condition passes.
 4. The ```other``` equivalent in RPGLE is ```default:```. This don't need ```break;``` as it will be the last part of the switch case that will be executed. 
+5. If you want to `switch` case using condition, then use it like below.
+    - The `switch(true)` is like `dow(1=1)`
+```js
+let num = 100;
+
+switch (true) {
+  case(num < 100):
+    console.log('lesser');
+    break;
+  
+  case(num > 100):
+    console.log('greater');
+    break;
+
+  case(num === 100):
+    console.log('equal');
+    break;
+
+  default:
+    console.log('wrong');
+}
+```
 
 ### For Loop
 ```javascript
