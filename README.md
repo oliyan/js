@@ -566,7 +566,7 @@ const now = new Date(); // Create a date object with current timestamp values in
  # Arrays
  ## Some useful array methods
  1. push (add an element at last position)
- 2. unshit (add an element at first position)
+ 2. unshift (add an element at first position)
  3. pop (remove an element at last position)
  4. shift (remove an element at first position)
  5. splice (add/remove an element at middle position)
